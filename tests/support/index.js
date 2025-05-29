@@ -1,19 +1,21 @@
 import { test as base, expect } from "@playwright/test";
-import { LoginPage } from "../pages/LoginPage.js";
-import { Toast } from "../pages/Components.js";
-import { MoviesPage } from "../pages/MoviesPage.js";
-import { LandingPage } from "../pages/LandingPage.js";
+import { Login } from "./actions/Login.js";
+import { Toast } from "./actions/Components.js";
+import { Movies } from "./actions/Movies.js";
+import { Leads } from "./actions/Leads.js";
 
 const test = base.extend({
   page: async ({ page }, use) => {
-    await use({
-        ...page,
-        landing: new LandingPage(page),
-        login: new LoginPage(page),
-        toast: new Toast(page),
-        movies: new MoviesPage(page),
-    });
-  },
+
+    const context = page
+
+    context['leads'] = new Leads(page);
+    context['login'] = new Login(page);
+    context['toast'] = new Toast(page);
+    context['movies'] = new Movies(page);
+
+    await use(context);
+  }
 });
 
 export {test, expect};
