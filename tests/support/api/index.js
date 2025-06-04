@@ -1,4 +1,6 @@
 import { expect } from "@playwright/test";
+import { release } from "os";
+import { title } from "process";
 
 export class Api {
   constructor(request) {
@@ -21,5 +23,45 @@ export class Api {
     this.token = body.token;
 
     console.log("Token: ", this.token);
+  }
+
+  async getCompanyIdByName(name) {
+
+    const response = await this.request.get(
+      "http://localhost:3333/companies",
+      {
+        headers: {
+          Authorization: `Bearer ${this.token}`,
+        },
+        params: {
+          name: name,
+        },
+      }
+    );
+    expect(response.ok()).toBeTruthy();
+
+    const body = JSON.parse(await response.text());
+
+    return body.data[0].id;
+  }
+
+  async postMovie(movie) {
+    const companyId = await this.getCompanyIdByName(movie.company);
+
+    const response = await this.request.post("http://localhost:3333/movies", {
+      headers: {
+        Authorization: `Bearer ${this.token}`,
+        ContentType: "multipart/form-data",
+        Accept: "application/json, text/plain, */*",
+      },
+      multipart: {
+        title: movie.title,
+        overview: movie.overview,
+        company_id: companyId,
+        release_year: movie.release_year,
+        featured: movie.featured,
+      },
+    });
+    expect(response.ok()).toBeTruthy();
   }
 }

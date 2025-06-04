@@ -18,15 +18,12 @@ test('não deve cadastrar quando o título é duplicado', async ({page, request}
 
     const movie = data.duplicate
 
-    await request.api.setToken();
+    await request.api.postMovie(movie);
+    await page.login.do('admin@zombieplus.com', 'pwd123', 'Admin');
 
-
-    // await executeSQL(`DELETE from movies m where title = '${movie.title}'`);
-
-    // await page.login.do('admin@zombieplus.com', 'pwd123', 'Admin');
-
-    // await page.movies.createMovie(movie);
-    // await page.toast.containText('Este conteúdo já encontra-se cadastrado no catálogo');
+    await page.movies.createMovie(movie);
+    await page.toast.containText('Este conteúdo já encontra-se cadastrado no catálogo');
+    await executeSQL(`DELETE from movies m where title = '${movie.title}'`);
 });
 
 test('não deve cadastrar quando os campos obrigatórios não forem preenchidos', async ({page}) => {
