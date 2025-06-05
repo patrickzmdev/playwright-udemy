@@ -1,0 +1,66 @@
+{
+  "create": {
+    "title": "The Walking Dead",
+    "overview": "Um grupo de sobreviventes luta para sobreviver em um mundo pós-apocalíptico dominado por zumbis, enquanto enfrentam dilemas morais e conflitos internos.",
+    "company": "AMC",
+    "release_year": 2010,
+    "featured": true,
+    "cover": "/covers/series/the-walking-dead.png",
+    "seasons": 11
+  },
+  "duplicate": {
+    "title": "Fear the Walking Dead",
+    "overview": "Uma série derivada que explora o início do apocalipse zumbi através da perspectiva de uma família disfuncional em Los Angeles.",
+    "company": "AMC",
+    "release_year": 2015,
+    "featured": false,
+    "cover": "/covers/series/fear-the-walking-dead.jpg",
+    "seasons": 8
+  },
+  "to_remove": {
+    "title": "Z Nation",
+    "overview": "Três anos após o surto zumbi, um grupo diverso de sobreviventes escolta o único conhecido imune através do país.",
+    "company": "Netflix",
+    "release_year": 2014,
+    "featured": false,
+    "cover": "/covers/series/z-nation.jpg",
+    "seasons": 5
+  },
+  "search": {
+    "input": "horror",
+    "outputs": [
+      "American Horror Story",
+      "Stranger Things",
+      "The Haunting of Hill House"
+    ],
+    "data": [
+      {
+        "title": "American Horror Story",
+        "overview": "Uma antologia de terror que explora diferentes temas assombrados a cada temporada, desde casas mal-assombradas até asilos psiquiátricos.",
+        "company": "FX",
+        "release_year": 2011,
+        "featured": true,
+        "cover": "/covers/series/american-horror-story.png",
+        "seasons": 12
+      },
+      {
+        "title": "Stranger Things",
+        "overview": "Um grupo de crianças em uma pequena cidade enfrenta criaturas sobrenaturais e conspirações governamentais nos anos 80.",
+        "company": "Netflix",
+        "release_year": 2016,
+        "featured": true,
+        "cover": "/covers/series/stranger-things.png",
+        "seasons": 4
+      },
+      {
+        "title": "The Haunting of Hill House",
+        "overview": "Uma família confronta memórias assombradas de sua antiga casa e os eventos aterrorizantes que os forçaram a fugir.",
+        "company": "Netflix",
+        "release_year": 2018,
+        "featured": false,
+        "cover": "/covers/series/haunting-hill-house.png",
+        "seasons": 1
+      }
+    ]
+  }
+}
