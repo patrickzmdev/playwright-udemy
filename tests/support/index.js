@@ -1,6 +1,6 @@
 import { test as base, expect } from "@playwright/test";
 import { Login } from "./actions/Login.js";
-import { Toast } from "./actions/Components.js";
+import { Popup } from "./actions/Components.js";
 import { Movies } from "./actions/Movies.js";
 import { Leads } from "./actions/Leads.js";
 import { Api } from "./api/index.js";
@@ -11,7 +11,7 @@ const test = base.extend({
 
     context["leads"] = new Leads(page);
     context["login"] = new Login(page);
-    context["toast"] = new Toast(page);
+    context["popup"] = new Popup(page);
     context["movies"] = new Movies(page);
 
     await use(context);

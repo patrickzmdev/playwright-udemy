@@ -7,7 +7,7 @@ test("deve cadastrar um lead na fila de espera", async ({ page }) => {
   await page.leads.visit();
   await page.leads.openLeadModal();
   await page.leads.submitLeadForm(leadName, leadEmail);
-  await page.toast.containText(/Agradecemos por compartilhar seus dados/);
+  await page.popup.haveText('Agradecemos por compartilhar seus dados conosco. Em breve, nossa equipe entrará em contato.');
 });
 
 test("não deve cadastrar quando o email ja existe", async ({ page, request }) => {
@@ -26,8 +26,8 @@ test("não deve cadastrar quando o email ja existe", async ({ page, request }) =
   await page.leads.visit();
   await page.leads.openLeadModal();
   await page.leads.submitLeadForm(leadName, leadEmail);
-  await page.toast.containText(
-    "O endereço de e-mail fornecido já está registrado em nossa fila de espera."
+  await page.popup.haveText(
+    "Verificamos que o endereço de e-mail fornecido já consta em nossa lista de espera. Isso significa que você está um passo mais perto de aproveitar nossos serviços."
   );
 });
 
