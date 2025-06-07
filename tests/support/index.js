@@ -4,6 +4,7 @@ import { Popup } from "./actions/Components.js";
 import { Movies } from "./actions/Movies.js";
 import { Leads } from "./actions/Leads.js";
 import { Api } from "./api/index.js";
+import { Tvshows } from "./actions/Tvshows.js";
 
 const test = base.extend({
   page: async ({ page }, use) => {
@@ -13,6 +14,7 @@ const test = base.extend({
     context["login"] = new Login(page);
     context["popup"] = new Popup(page);
     context["movies"] = new Movies(page);
+    context["tvshows"] = new Tvshows(page);
 
     await use(context);
   },

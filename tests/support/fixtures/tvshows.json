@@ -2,20 +2,20 @@
   "create": {
     "title": "The Walking Dead",
     "overview": "Um grupo de sobreviventes luta para sobreviver em um mundo pós-apocalíptico dominado por zumbis, enquanto enfrentam dilemas morais e conflitos internos.",
-    "company": "AMC",
+    "company": "Netflix",
     "release_year": 2010,
     "featured": true,
     "cover": "/covers/series/the-walking-dead.png",
-    "seasons": 11
+    "seasons": "11"
   },
   "duplicate": {
     "title": "Fear the Walking Dead",
     "overview": "Uma série derivada que explora o início do apocalipse zumbi através da perspectiva de uma família disfuncional em Los Angeles.",
-    "company": "AMC",
+    "company": "Netflix",
     "release_year": 2015,
     "featured": false,
     "cover": "/covers/series/fear-the-walking-dead.jpg",
-    "seasons": 8
+    "seasons": "8"
   },
   "to_remove": {
     "title": "Z Nation",
@@ -24,42 +24,42 @@
     "release_year": 2014,
     "featured": false,
     "cover": "/covers/series/z-nation.jpg",
-    "seasons": 5
+    "seasons": "5"
   },
   "search": {
-    "input": "horror",
+    "input": "Horror",
     "outputs": [
       "American Horror Story",
-      "Stranger Things",
-      "The Haunting of Hill House"
+      "Horror Hospital",
+      "The Horror Chronicles"
     ],
     "data": [
       {
         "title": "American Horror Story",
         "overview": "Uma antologia de terror que explora diferentes temas assombrados a cada temporada, desde casas mal-assombradas até asilos psiquiátricos.",
-        "company": "FX",
+        "company": "Netflix",
         "release_year": 2011,
         "featured": true,
         "cover": "/covers/series/american-horror-story.png",
-        "seasons": 12
+        "seasons": "12"
       },
       {
-        "title": "Stranger Things",
-        "overview": "Um grupo de crianças em uma pequena cidade enfrenta criaturas sobrenaturais e conspirações governamentais nos anos 80.",
-        "company": "Netflix",
-        "release_year": 2016,
-        "featured": true,
-        "cover": "/covers/series/stranger-things.png",
-        "seasons": 4
-      },
-      {
-        "title": "The Haunting of Hill House",
-        "overview": "Uma família confronta memórias assombradas de sua antiga casa e os eventos aterrorizantes que os forçaram a fugir.",
+        "title": "Horror Hospital",
+        "overview": "Um hospital abandonado se torna palco de eventos sobrenaturais aterrorizantes quando uma equipe médica fica presa durante a noite.",
         "company": "Netflix",
         "release_year": 2018,
+        "featured": true,
+        "cover": "/covers/series/horror-hospital.png",
+        "seasons": "3"
+      },
+      {
+        "title": "The Horror Chronicles",
+        "overview": "Uma compilação de histórias de terror interconectadas que exploram os medos mais profundos da humanidade.",
+        "company": "Netflix",
+        "release_year": 2020,
         "featured": false,
-        "cover": "/covers/series/haunting-hill-house.png",
-        "seasons": 1
+        "cover": "/covers/series/horror-chronicles.png",
+        "seasons": "2"
       }
     ]
   }
